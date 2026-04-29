@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "The Hidden River",
+    "author": "Ayaan Rahman",
+    "description": "A touching story about love, loss, and rediscovery along the banks of a forgotten river.",
+    "category": "Story",
+    "available_quantity": 7,
+    "image_url": "https://example.com/images/hidden-river.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Next.js in Action",
+    "author": "Sarah Mitchell",
+    "description": "A practical guide to building modern web applications using Next.js framework.",
+    "category": "Tech",
+    "available_quantity": 12,
+    "image_url": "https://example.com/images/nextjs-action.jpg"
+  },
+  {
+    "id": 3,
+    "title": "The Quantum Puzzle",
+    "author": "Dr. Ethan Clarke",
+    "description": "An exploration of quantum mechanics and its mysteries explained for curious minds.",
+    "category": "Science",
+    "available_quantity": 5,
+    "image_url": "https://example.com/images/quantum-puzzle.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Voices of Power",
+    "author": "Mariam Hossain",
+    "description": "A political narrative highlighting influential leaders and global decision-making.",
+    "category": "Politics",
+    "available_quantity": 9,
+    "image_url": "https://example.com/images/voices-of-power.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Whispers of the Past",
+    "author": "Leonard Gray",
+    "description": "A historical story that blends mystery and emotional storytelling across generations.",
+    "category": "Story",
+    "available_quantity": 4,
+    "image_url": "https://example.com/images/whispers-past.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Mastering React",
+    "author": "John Peterson",
+    "description": "Deep dive into React concepts, hooks, performance, and advanced patterns.",
+    "category": "Tech",
+    "available_quantity": 15,
+    "image_url": "https://example.com/images/mastering-react.jpg"
+  },
+  {
+    "id": 7,
+    "title": "The Universe Explained",
+    "author": "Dr. Laila Karim",
+    "description": "A journey through space, stars, galaxies, and the origin of the universe.",
+    "category": "Science",
+    "available_quantity": 6,
+    "image_url": "https://example.com/images/universe-explained.jpg"
+  },
+  {
+    "id": 8,
+    "title": "The Modern State",
+    "author": "Robert Langdon",
+    "description": "An analysis of modern political systems and governance models around the world.",
+    "category": "Politics",
+    "available_quantity": 8,
+    "image_url": "https://example.com/images/modern-state.jpg"
+  },
+  {
+    "id": 9,
+    "title": "The Silent Forest",
+    "author": "Nusrat Jahan",
+    "description": "A poetic story of nature, silence, and human connection with the environment.",
+    "category": "Story",
+    "available_quantity": 10,
+    "image_url": "https://example.com/images/silent-forest.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Fullstack Web Development",
+    "author": "Michael Brown",
+    "description": "Complete guide to frontend and backend development with modern tools.",
+    "category": "Tech",
+    "available_quantity": 11,
+    "image_url": "https://example.com/images/fullstack-web.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Biology of Life",
+    "author": "Dr. Sofia Ahmed",
+    "description": "Understanding cells, genetics, and the foundation of living organisms.",
+    "category": "Science",
+    "available_quantity": 3,
+    "image_url": "https://example.com/images/biology-life.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Power and Diplomacy",
+    "author": "James Carter",
+    "description": "Insights into international relations, diplomacy, and political strategy.",
+    "category": "Politics",
+    "available_quantity": 7,
+    "image_url": "https://example.com/images/power-diplomacy.jpg"
+  }
+]

@@ -69,7 +69,7 @@ const Navbar = () => {
           </div>
         ) : ( */}
         <div className="hidden md:flex items-center gap-4">
-          <Image src={avatar} alt="User" width={60} height={60} />
+          <Image src={avatar} alt="User" width={40} height={40} />
           <Link href="/login">
             <button className="bg-[#f59e0b] text-[#081f30] font-bold rounded-lg cursor-pointer px-4 py-2">
               Login
