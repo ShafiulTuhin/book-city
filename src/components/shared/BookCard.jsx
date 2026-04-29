@@ -7,23 +7,17 @@ const BookCard = ({ book }) => {
   return (
     <div className=" border border-gray-300 mt-7 p-5 rounded-lg">
       <div className="relative w-full aspect-square">
-        {/* <Image
-          src={book.image_url}
+        <Image
+          src={book.image_url.trim()}
           alt={book.title}
           fill
           sizes="(max-width: 640px) 100vw, 
          (max-width: 1024px) 50vw, 
          33vw"
           className="rounded-xl object-cover"
-        /> */}
-        {/* <Image src={book.imageUrl} alt={book.title} width={200} height={200} /> */}
-        <Image
-          src={book.image_url}
-          alt={book.title}
-          width={200}
-          height={300}
-          className="w-full h-[250px] md:h-full object-cover rounded-lg"
         />
+        {/* <Image src={book.imageUrl} alt={book.title} width={200} height={200} /> */}
+
         <Chip className="absolute top-2 left-2">{book.category}</Chip>
       </div>
       <h2 className="font-bold text-2xl text-[#081f30] my-5">{book.title}</h2>

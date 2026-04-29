@@ -14,13 +14,25 @@ const BookDetailSPage = async ({ params }) => {
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* IMAGE SECTION */}
         <Card className="overflow-hidden rounded-2xl shadow-lg">
-          <Image
-            src={book.image_url}
+          {/* <Image
+            src={book.image_url.trim()}
             alt={book.title}
             width={800}
             height={600}
-            className="w-full h-[350px] md:h-full object-cover"
-          />
+            className="w-full h-[350px] md:h-full object-cover rounded-lg"
+            priority
+          /> */}
+          <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px]">
+            <Image
+              src={book.image_url.trim()}
+              alt={book.title}
+              fill
+              sizes="(max-width: 640px) 100vw, 
+           (max-width: 1024px) 50vw, 
+           33vw"
+              className="rounded-xl object-cover"
+            />
+          </div>
         </Card>
 
         {/* DETAILS SECTION */}
