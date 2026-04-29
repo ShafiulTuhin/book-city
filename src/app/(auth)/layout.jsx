@@ -4,9 +4,10 @@ import React from "react";
 
 const AuthLayout = ({ children }) => {
   return (
-    <div>
+    <div className="min-h-screen flex flex-col">
       <Navbar />
-      {children}
+      <main className="flex-1">{children}</main>
+
       <Footer />
     </div>
   );

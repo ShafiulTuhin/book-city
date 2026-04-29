@@ -6,7 +6,7 @@
     "description": "A touching story about love, loss, and rediscovery along the banks of a forgotten river.",
     "category": "Story",
     "available_quantity": 7,
-    "image_url": "https://example.com/images/hidden-river.jpg"
+    "image_url": "https://i.pinimg.com/1200x/04/6a/ef/046aef3824fc35cd1ad0bff0f253619a.jpg"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "description": "A practical guide to building modern web applications using Next.js framework.",
     "category": "Tech",
     "available_quantity": 12,
-    "image_url": "https://example.com/images/nextjs-action.jpg"
+    "image_url": "https://i.pinimg.com/1200x/04/6a/ef/046aef3824fc35cd1ad0bff0f253619a.jpg"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "description": "An exploration of quantum mechanics and its mysteries explained for curious minds.",
     "category": "Science",
     "available_quantity": 5,
-    "image_url": "https://example.com/images/quantum-puzzle.jpg"
+    "image_url": "https://i.pinimg.com/1200x/04/6a/ef/046aef3824fc35cd1ad0bff0f253619a.jpg"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "description": "A political narrative highlighting influential leaders and global decision-making.",
     "category": "Politics",
     "available_quantity": 9,
-    "image_url": "https://example.com/images/voices-of-power.jpg"
+    "image_url": "https://i.pinimg.com/1200x/04/6a/ef/046aef3824fc35cd1ad0bff0f253619a.jpg"
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "description": "A historical story that blends mystery and emotional storytelling across generations.",
     "category": "Story",
     "available_quantity": 4,
-    "image_url": "https://example.com/images/whispers-past.jpg"
+    "image_url": "https://i.pinimg.com/1200x/04/6a/ef/046aef3824fc35cd1ad0bff0f253619a.jpg"
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "description": "Deep dive into React concepts, hooks, performance, and advanced patterns.",
     "category": "Tech",
     "available_quantity": 15,
-    "image_url": "https://example.com/images/mastering-react.jpg"
+    "image_url": "https://i.pinimg.com/1200x/04/6a/ef/046aef3824fc35cd1ad0bff0f253619a.jpg"
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@
     "description": "A journey through space, stars, galaxies, and the origin of the universe.",
     "category": "Science",
     "available_quantity": 6,
-    "image_url": "https://example.com/images/universe-explained.jpg"
+    "image_url": "https://i.pinimg.com/1200x/04/6a/ef/046aef3824fc35cd1ad0bff0f253619a.jpg"
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "description": "An analysis of modern political systems and governance models around the world.",
     "category": "Politics",
     "available_quantity": 8,
-    "image_url": "https://example.com/images/modern-state.jpg"
+    "image_url": "https://i.pinimg.com/1200x/04/6a/ef/046aef3824fc35cd1ad0bff0f253619a.jpg"
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@
     "description": "A poetic story of nature, silence, and human connection with the environment.",
     "category": "Story",
     "available_quantity": 10,
-    "image_url": "https://example.com/images/silent-forest.jpg"
+    "image_url": "https://i.pinimg.com/1200x/04/6a/ef/046aef3824fc35cd1ad0bff0f253619a.jpg"
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@
     "description": "Complete guide to frontend and backend development with modern tools.",
     "category": "Tech",
     "available_quantity": 11,
-    "image_url": "https://example.com/images/fullstack-web.jpg"
+    "image_url": "https://i.pinimg.com/1200x/04/6a/ef/046aef3824fc35cd1ad0bff0f253619a.jpg"
   },
   {
     "id": 11,
@@ -96,7 +96,7 @@
     "description": "Understanding cells, genetics, and the foundation of living organisms.",
     "category": "Science",
     "available_quantity": 3,
-    "image_url": "https://example.com/images/biology-life.jpg"
+    "image_url": "https://i.pinimg.com/1200x/04/6a/ef/046aef3824fc35cd1ad0bff0f253619a.jpg"
   },
   {
     "id": 12,
@@ -105,6 +105,6 @@
     "description": "Insights into international relations, diplomacy, and political strategy.",
     "category": "Politics",
     "available_quantity": 7,
-    "image_url": "https://example.com/images/power-diplomacy.jpg"
+    "image_url": "https://i.pinimg.com/1200x/04/6a/ef/046aef3824fc35cd1ad0bff0f253619a.jpg"
   }
 ]
