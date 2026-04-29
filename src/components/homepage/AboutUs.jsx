@@ -67,7 +67,7 @@ const AboutUs = () => {
             {/* Book image 2 */}
             <Card className="overflow-hidden rounded-xl shadow-md">
               <Image
-                src="https://images.unsplash.com/photo-1455885666463-6c3e1a7a6f6b"
+                src="https://images.pexels.com/photos/9572540/pexels-photo-9572540.jpeg"
                 alt="Library"
                 width={400}
                 height={300}

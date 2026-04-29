@@ -6,7 +6,7 @@
     "description": "A touching story about love, loss, and rediscovery along the banks of a forgotten river.",
     "category": "Story",
     "available_quantity": 7,
-    "image_url": "https://i.pinimg.com/1200x/04/6a/ef/046aef3824fc35cd1ad0bff0f253619a.jpg"
+    "image_url": "https://images.pexels.com/photos/23224861/pexels-photo-23224861.jpeg"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "description": "A practical guide to building modern web applications using Next.js framework.",
     "category": "Tech",
     "available_quantity": 12,
-    "image_url": "https://i.pinimg.com/1200x/04/6a/ef/046aef3824fc35cd1ad0bff0f253619a.jpg"
+    "image_url": "https://images.pexels.com/photos/29459444/pexels-photo-29459444.jpeg"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "description": "An exploration of quantum mechanics and its mysteries explained for curious minds.",
     "category": "Science",
     "available_quantity": 5,
-    "image_url": "https://i.pinimg.com/1200x/04/6a/ef/046aef3824fc35cd1ad0bff0f253619a.jpg"
+    "image_url": "https://images.pexels.com/photos/8471876/pexels-photo-8471876.jpeg"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "description": "A political narrative highlighting influential leaders and global decision-making.",
     "category": "Politics",
     "available_quantity": 9,
-    "image_url": "https://i.pinimg.com/1200x/04/6a/ef/046aef3824fc35cd1ad0bff0f253619a.jpg"
+    "image_url": " https://images.pexels.com/photos/8849335/pexels-photo-8849335.jpeg"
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "description": "A historical story that blends mystery and emotional storytelling across generations.",
     "category": "Story",
     "available_quantity": 4,
-    "image_url": "https://i.pinimg.com/1200x/04/6a/ef/046aef3824fc35cd1ad0bff0f253619a.jpg"
+    "image_url": "https://images.pexels.com/photos/5624380/pexels-photo-5624380.jpeg"
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "description": "Deep dive into React concepts, hooks, performance, and advanced patterns.",
     "category": "Tech",
     "available_quantity": 15,
-    "image_url": "https://i.pinimg.com/1200x/04/6a/ef/046aef3824fc35cd1ad0bff0f253619a.jpg"
+    "image_url": "https://images.pexels.com/photos/31269050/pexels-photo-31269050.jpeg"
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@
     "description": "A journey through space, stars, galaxies, and the origin of the universe.",
     "category": "Science",
     "available_quantity": 6,
-    "image_url": "https://i.pinimg.com/1200x/04/6a/ef/046aef3824fc35cd1ad0bff0f253619a.jpg"
+    "image_url": "https://images.pexels.com/photos/10513243/pexels-photo-10513243.jpeg"
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "description": "An analysis of modern political systems and governance models around the world.",
     "category": "Politics",
     "available_quantity": 8,
-    "image_url": "https://i.pinimg.com/1200x/04/6a/ef/046aef3824fc35cd1ad0bff0f253619a.jpg"
+    "image_url": "https://images.pexels.com/photos/7103043/pexels-photo-7103043.jpeg"
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@
     "description": "A poetic story of nature, silence, and human connection with the environment.",
     "category": "Story",
     "available_quantity": 10,
-    "image_url": "https://i.pinimg.com/1200x/04/6a/ef/046aef3824fc35cd1ad0bff0f253619a.jpg"
+    "image_url": "https://images.pexels.com/photos/37187699/pexels-photo-37187699.jpeg"
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@
     "description": "Complete guide to frontend and backend development with modern tools.",
     "category": "Tech",
     "available_quantity": 11,
-    "image_url": "https://i.pinimg.com/1200x/04/6a/ef/046aef3824fc35cd1ad0bff0f253619a.jpg"
+    "image_url": "https://images.pexels.com/photos/16062008/pexels-photo-16062008.jpeg"
   },
   {
     "id": 11,
@@ -96,7 +96,7 @@
     "description": "Understanding cells, genetics, and the foundation of living organisms.",
     "category": "Science",
     "available_quantity": 3,
-    "image_url": "https://i.pinimg.com/1200x/04/6a/ef/046aef3824fc35cd1ad0bff0f253619a.jpg"
+    "image_url": "https://images.pexels.com/photos/17165127/pexels-photo-17165127.jpeg"
   },
   {
     "id": 12,
@@ -105,6 +105,6 @@
     "description": "Insights into international relations, diplomacy, and political strategy.",
     "category": "Politics",
     "available_quantity": 7,
-    "image_url": "https://i.pinimg.com/1200x/04/6a/ef/046aef3824fc35cd1ad0bff0f253619a.jpg"
+    "image_url": "https://images.pexels.com/photos/8847169/pexels-photo-8847169.jpeg"
   }
 ]
