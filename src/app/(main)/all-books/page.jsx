@@ -9,15 +9,6 @@ export const metadata = {
 };
 
 const AllBooksPage = async ({ searchParams }) => {
-  // const books = await getBooks();
-  // const categories = await getCategories();
-  // const { category,search } = await searchParams;
-
-  // const filteredCategory = category
-  //   ? books.filter(
-  //       (book) => book.category.toLowerCase() == category.toLowerCase(),
-  //     )
-  //   : books;
   const books = await getBooks();
   const categories = await getCategories();
 
@@ -31,7 +22,6 @@ const AllBooksPage = async ({ searchParams }) => {
       (book) => book.category.toLowerCase() === category.toLowerCase(),
     );
   }
-
   // Filter by search
   if (search) {
     filteredBooks = filteredBooks.filter(
@@ -65,16 +55,27 @@ const AllBooksPage = async ({ searchParams }) => {
                 </button>
               </Link>
 
-              {categories.map((cat) => (
-                <Link
-                  href={`/all-books?category=${cat.name.toLowerCase()}`}
-                  key={cat.id}
-                >
-                  <button className="w-full text-left px-4 py-2 mt-3 rounded-lg bg-gray-100 hover:bg-[#081f30] hover:text-white transition cursor-pointer">
-                    {cat.name}
-                  </button>
-                </Link>
-              ))}
+              {categories.map((cat) => {
+                const isActive =
+                  category?.toLowerCase() === cat.name.toLowerCase();
+
+                return (
+                  <Link
+                    href={`/all-books?category=${cat.name.toLowerCase()}`}
+                    key={cat.id}
+                  >
+                    <button
+                      className={`w-full text-left px-4 py-2 mt-3 rounded-lg transition cursor-pointer ${
+                        isActive
+                          ? "bg-[#081f30] text-white"
+                          : "bg-gray-100 hover:bg-[#081f30] hover:text-white"
+                      }`}
+                    >
+                      {cat.name}
+                    </button>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </aside>
@@ -92,7 +93,7 @@ const AllBooksPage = async ({ searchParams }) => {
           </div>
 
           {/* Books Grid */}
-          {books.length > 0 ? (
+          {filteredBooks.length > 0 ? (
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
               {filteredBooks.map((book) => (
                 <BookCard key={book.id} book={book} />
