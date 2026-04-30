@@ -87,7 +87,7 @@ const Login = () => {
               </p>
             )}
           </fieldset>
-          <button className="btn bg-[#f59e0b] py-2 text-[#081f30] rounded-lg w-full font-semibold cursor-pointer">
+          <button className="btn bg-[#f59e0b] py-2 text-[#081f30] hover:opacity-90 transition rounded-lg w-full font-semibold cursor-pointer">
             Login
           </button>
         </form>

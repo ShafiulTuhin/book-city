@@ -12,7 +12,7 @@ const NavLink = ({ href, children }) => {
       href={href}
       className={`px-3 py-2 rounded-lg transition ${
         isActive
-          ? "btn bg-[#f59e0b] text-[#081f30]"
+          ? "btn bg-[#f59e0b] text-[#081f30] hover:opacity-90 transition"
           : "text-gray-500 hover:text-black "
       }`}
     >

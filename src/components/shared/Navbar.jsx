@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
@@ -81,7 +80,7 @@ const Navbar = () => {
 
             <button
               onClick={handleLogout}
-              className="bg-[#f59e0b] text-[#081f30] font-bold rounded-lg cursor-pointer px-4 py-2"
+              className="bg-[#f59e0b] text-[#081f30] font-bold hover:opacity-90 transition rounded-lg cursor-pointer px-4 py-2"
             >
               Logout
             </button>
@@ -90,16 +89,16 @@ const Navbar = () => {
           <div className="hidden md:flex items-center gap-4">
             <Image src={avatar} alt="User" width={40} height={40} />
             <Link href="/login">
-              <button className="bg-[#f59e0b] text-[#081f30] font-bold rounded-lg cursor-pointer px-4 py-2">
+              <button className="bg-[#f59e0b] text-[#081f30] font-bold hover:opacity-90 transition rounded-lg cursor-pointer px-4 py-2">
                 Login
               </button>
             </Link>
 
             <Button
               onClick={handleGoogleLogin}
-              className="bg-[#f59e0b] text-[#081f30] font-bold rounded-lg py-2"
+              className="bg-[#f59e0b] text-[#081f30] hover:opacity-90 transition font-bold rounded-lg py-2"
             >
-              <FaGoogle alt="Signin with Google" />
+              <FaGoogle />
             </Button>
           </div>
         )}
@@ -126,10 +125,10 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li className={`${border}`}>
-            <NavLink href="/all-books">All Photo</NavLink>
+            <NavLink href="/all-books">All Books</NavLink>
           </li>
           <li className={`${border}`}>
-            <NavLink href="/my-profile">Pricing</NavLink>
+            <NavLink href="/my-profile">My Profile</NavLink>
           </li>
         </ul>
 
@@ -147,7 +146,7 @@ const Navbar = () => {
 
               <button
                 onClick={handleLogout}
-                className="btn bg-[#f59e0b] text-[#081f30] font-bold cursor-pointer py-2  rounded-lg w-full"
+                className="btn bg-[#f59e0b] text-[#081f30] hover:opacity-90 transition font-bold cursor-pointer py-2  rounded-lg w-full"
               >
                 Logout
               </button>
@@ -155,7 +154,7 @@ const Navbar = () => {
           ) : (
             <div className="flex flex-col gap-3">
               <Link href="/login">
-                <button className="btn bg-[#f59e0b] text-[#081f30] py-2  cursor-pointer rounded-lg w-full font-bold">
+                <button className="btn bg-[#f59e0b] text-[#081f30] hover:opacity-90 transition py-2  cursor-pointer rounded-lg w-full font-bold">
                   Login
                 </button>
               </Link>

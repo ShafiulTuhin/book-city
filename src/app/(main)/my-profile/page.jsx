@@ -1,12 +1,12 @@
-import React from "react";
+import MyProfile from "@/components/my-profile/MyProfile";
 
 export const metadata = {
   title: "Book-City | My-profile",
-  description: "Get details for a logged in user",
+  description: "Update your information here",
 };
 
 const MyProfilePage = () => {
-  return <div>My profile</div>;
+  return <MyProfile />;
 };
 
 export default MyProfilePage;
