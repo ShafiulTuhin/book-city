@@ -6,10 +6,9 @@ import LogoImg from "@/assets/logo.png";
 import NavLink from "./NavLink";
 import avatar from "@/assets/user.png";
 import { authClient } from "@/lib/auth-client";
-import { Button } from "@heroui/react";
-import { FaGoogle } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
+import { handleGoogleLogin } from "@/lib/data";
 
 const Navbar = () => {
   const { data, isPending } = authClient.useSession();
@@ -38,12 +37,6 @@ const Navbar = () => {
       toast.error("Logout failed");
       console.log(error);
     }
-  };
-
-  const handleGoogleLogin = async () => {
-    await authClient.signIn.social({
-      provider: "google",
-    });
   };
 
   return (
@@ -94,12 +87,18 @@ const Navbar = () => {
               </button>
             </Link>
 
-            <Button
+            <button
               onClick={handleGoogleLogin}
-              className="bg-[#f59e0b] text-[#081f30] hover:opacity-90 transition font-bold rounded-lg py-2"
+              className="border border-[#f59e0b] cursor-pointer rounded-lg p-2"
             >
-              <FaGoogle />
-            </Button>
+              <Image
+                src="https://www.svgrepo.com/show/475656/google-color.svg"
+                alt="Google"
+                // className="w-5 h-5"
+                width={20}
+                height={20}
+              />
+            </button>
           </div>
         )}
 
@@ -157,13 +156,19 @@ const Navbar = () => {
                   Login
                 </button>
               </Link>
-              <Button
+              <button
                 onClick={handleGoogleLogin}
-                className="flex gap-2 bg-[#f59e0b] py-2 w-full  text-[#081f30] font-bold rounded-lg"
+                className="flex gap-2 border items-center justify-center border-[#f59e0b] py-2 w-full  text-[#081f30] font-bold rounded-lg mx-auto "
               >
-                <FaGoogle />
-                Login with google
-              </Button>
+                <Image
+                  src="https://www.svgrepo.com/show/475656/google-color.svg"
+                  alt="Google"
+                  // className="w-5 h-5"
+                  width={20}
+                  height={20}
+                />
+                Continue with google
+              </button>
             </div>
           )}
         </div>

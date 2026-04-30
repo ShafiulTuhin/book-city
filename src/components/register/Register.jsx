@@ -1,6 +1,8 @@
 "use client";
 
 import { authClient } from "@/lib/auth-client";
+import { handleGoogleLogin } from "@/lib/data";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -20,23 +22,13 @@ const Register = () => {
   const handleSubmitForm = async (data) => {
     const { name, email, password, photo } = data;
 
-    const { data: res, error } = await authClient.signUp.email(
-      {
-        name,
-        email,
-        password,
-        image: photo,
-        callbackURL: "/",
-      },
-      //   {
-      //     onSuccess: () => {
-      //       router.push("/login");
-      //     },
-      //   },
-      //   {
-      //     redirect: false,
-      //   },
-    );
+    const { data: res, error } = await authClient.signUp.email({
+      name,
+      email,
+      password,
+      image: photo,
+      callbackURL: "/",
+    });
 
     if (error) {
       toast.error(error.message);
@@ -135,6 +127,33 @@ const Register = () => {
             Register
           </button>
         </form>
+        <div className="text-center mt-4 lg:w-1/2 mx-auto">
+          {/* Continue with Google Button */}
+          <button
+            onClick={handleGoogleLogin}
+            className="flex items-center justify-center gap-3 w-full border border-[#f59e0b] rounded-lg py-2 hover:bg-gray-100 transition cursor-pointer"
+          >
+            <Image
+              src="https://www.svgrepo.com/show/475656/google-color.svg"
+              alt="Google"
+              // className="w-5 h-5"
+              width={30}
+              height={30}
+            />
+            <span className="font-medium text-[#081f30]">
+              Continue with Google
+            </span>
+          </button>
+          <p className="mt-3 text-[#081f30]">
+            Already have an account?
+            <span
+              onClick={() => router.push("/login")}
+              className="text-[#f59e0b] cursor-pointer underline font-bold"
+            >
+              Login
+            </span>
+          </p>
+        </div>
       </div>
     </div>
   );

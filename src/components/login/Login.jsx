@@ -1,6 +1,9 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
-import Link from "next/link";
+import { handleGoogleLogin } from "@/lib/data";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -13,6 +16,7 @@ const Login = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const router = useRouter();
   const handleSubmitForm = async (data) => {
     const { email, password } = data;
 
@@ -41,7 +45,6 @@ const Login = () => {
           onSubmit={handleSubmit(handleSubmitForm)}
           className="lg:w-1/2 mx-auto space-y-4"
         >
-          {" "}
           <fieldset className="fieldset ">
             <legend className="fieldset-legend">Email address</legend>
             <input
@@ -91,12 +94,33 @@ const Login = () => {
             Login
           </button>
         </form>
-        <p className="text-center mt-4">
-          Dont’t Have An Account ?
-          <Link href={"/register"}>
-            <span className="text-[#f59e0b] font-semibold"> Register</span>{" "}
-          </Link>
-        </p>
+        <div className="text-center mt-4 lg:w-1/2 mx-auto">
+          {/* Continue with Google Button */}
+          <button
+            onClick={handleGoogleLogin}
+            className="flex items-center justify-center gap-3 w-full border border-[#f59e0b] rounded-lg py-2 hover:bg-gray-100 transition cursor-pointer"
+          >
+            <Image
+              src="https://www.svgrepo.com/show/475656/google-color.svg"
+              alt="Google"
+              // className="w-5 h-5"
+              width={30}
+              height={30}
+            />
+            <span className="font-medium text-[#081f30] font-bold">
+              Continue with Google
+            </span>
+          </button>
+          <p className="mt-3 text-[#081f30]">
+            Do not have an account ?
+            <span
+              onClick={() => router.push("/register")}
+              className="text-[#f59e0b] cursor-pointer underline font-bold"
+            >
+              Register
+            </span>
+          </p>
+        </div>
       </div>
     </div>
   );
