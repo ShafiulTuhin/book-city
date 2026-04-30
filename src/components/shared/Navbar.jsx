@@ -26,7 +26,7 @@ const Navbar = () => {
       await authClient.signOut({
         fetchOptions: {
           onSuccess: () => {
-            router.push("/"); // redirect to login page
+            router.push("/");
             toast.success("Logged out successfully", {
               position: "top-center",
               autoClose: 5000,

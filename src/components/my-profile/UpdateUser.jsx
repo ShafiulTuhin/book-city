@@ -60,7 +60,7 @@ const UpdateUser = () => {
       <div className="flex gap-3 pt-3">
         {/* Cancel */}
         <Link href="/my-profile" className="flex-1">
-          <button className="w-full btn bg-gray-200 py-2 rounded-lg">
+          <button className="w-full btn bg-gray-200 py-2 rounded-lg cursor-pointer">
             Cancel
           </button>
         </Link>
@@ -68,7 +68,7 @@ const UpdateUser = () => {
         {/* Save */}
         <button
           onClick={updateUser}
-          className="flex-1 btn bg-[#f59e0b] text-[#081f30] py-2 rounded-lg"
+          className="flex-1 btn bg-[#f59e0b] text-[#081f30] py-2 rounded-lg cursor-pointer"
         >
           Save
         </button>

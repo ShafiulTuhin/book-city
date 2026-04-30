@@ -1,6 +1,6 @@
 import { getBooks } from "@/lib/data";
 import Image from "next/image";
-import { Button, Card, Badge } from "@heroui/react";
+import { Button, Card } from "@heroui/react";
 
 export const generateMetadata = async ({ params }) => {
   const { id } = await params;
@@ -40,10 +40,6 @@ const BookDetailSPage = async ({ params }) => {
 
         {/* DETAILS SECTION */}
         <div className="flex flex-col justify-center">
-          <Badge className="w-fit bg-pink-100 text-pink-600 px-3 py-1 rounded-full">
-            {book.category}
-          </Badge>
-
           <h1 className="text-3xl md:text-4xl font-bold text-[#081f30] mt-3">
             {book.title}
           </h1>
@@ -57,11 +53,11 @@ const BookDetailSPage = async ({ params }) => {
           </p>
 
           <div className="mt-6 flex items-center gap-3">
-            <span className="text-sm font-medium text-gray-600">
+            <span className="text-sm font-medium text-gray-600 font-bold">
               Available:
             </span>
-            <span className="bg-[#081f30] text-white px-3 py-1 rounded-lg text-sm">
-              {book.available_quantity} copies
+            <span className="text-[#081f30] font-bold px-3 py-1 rounded-lg text-sm">
+              {book.available_quantity} copies left
             </span>
           </div>
 

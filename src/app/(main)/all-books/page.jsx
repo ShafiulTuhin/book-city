@@ -9,18 +9,40 @@ export const metadata = {
 };
 
 const AllBooksPage = async ({ searchParams }) => {
+  // const books = await getBooks();
+  // const categories = await getCategories();
+  // const { category,search } = await searchParams;
+
+  // const filteredCategory = category
+  //   ? books.filter(
+  //       (book) => book.category.toLowerCase() == category.toLowerCase(),
+  //     )
+  //   : books;
   const books = await getBooks();
   const categories = await getCategories();
-  const { category } = await searchParams;
 
-  const filteredCategory = category
-    ? books.filter(
-        (book) => book.category.toLowerCase() == category.toLowerCase(),
-      )
-    : books;
+  const { category, search } = await searchParams;
+
+  let filteredBooks = books;
+
+  // Filter by category
+  if (category) {
+    filteredBooks = filteredBooks.filter(
+      (book) => book.category.toLowerCase() === category.toLowerCase(),
+    );
+  }
+
+  // Filter by search
+  if (search) {
+    filteredBooks = filteredBooks.filter(
+      (book) =>
+        book.title.toLowerCase().includes(search.toLowerCase()) ||
+        book.author.toLowerCase().includes(search.toLowerCase()),
+    );
+  }
 
   return (
-    <div className="container mx-auto py-10">
+    <div className="container mx-auto py-10 px-4 lg:px-0">
       {/* Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
         {/* LEFT SIDEBAR */}
@@ -72,7 +94,7 @@ const AllBooksPage = async ({ searchParams }) => {
           {/* Books Grid */}
           {books.length > 0 ? (
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
-              {filteredCategory.map((book) => (
+              {filteredBooks.map((book) => (
                 <BookCard key={book.id} book={book} />
               ))}
             </div>
