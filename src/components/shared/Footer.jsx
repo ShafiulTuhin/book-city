@@ -85,13 +85,13 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-3">Contact Us</h3>
 
-            <div className="flex flex-col gap-3">
+            <div className="flex ">
               <input
                 type="email"
                 placeholder="Your email"
-                className="px-3 py-2 rounded-lg text-black outline-none"
+                className="px-3 py-2 rounded-l-lg text-black bg-gray-600 outline-none"
               />
-              <button className="bg-[#f59e0b] text-[#081f30] font-semibold py-2 rounded-lg hover:opacity-90">
+              <button className="bg-[#f59e0b] w-20 text-[#081f30] font-semibold py-2 cursor-pointer rounded-r-lg hover:opacity-90">
                 Send
               </button>
             </div>
