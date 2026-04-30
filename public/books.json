@@ -24,7 +24,7 @@
     "description": "An exploration of quantum mechanics and its mysteries explained for curious minds.",
     "category": "Science",
     "available_quantity": 5,
-    "image_url": "https://images.pexels.com/photos/8471876/pexels-photo-8471876.jpeg"
+    "image_url": "https://images.pexels.com/photos/15697953/pexels-photo-15697953.jpeg"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "description": "A political narrative highlighting influential leaders and global decision-making.",
     "category": "Science",
     "available_quantity": 9,
-    "image_url": "https://images.pexels.com/photos/23224861/pexels-photo-23224861.jpeg"
+    "image_url": "https://images.pexels.com/photos/1130980/pexels-photo-1130980.jpeg"
   },
   {
     "id": 5,
@@ -69,7 +69,7 @@
     "description": "An analysis of modern political systems and governance models around the world.",
     "category": "Politics",
     "available_quantity": 8,
-    "image_url": "https://images.pexels.com/photos/7103043/pexels-photo-7103043.jpeg"
+    "image_url": "https://images.pexels.com/photos/1424874/pexels-photo-1424874.jpeg"
   },
   {
     "id": 9,
@@ -105,6 +105,6 @@
     "description": "Insights into international relations, diplomacy, and political strategy.",
     "category": "Politics",
     "available_quantity": 7,
-    "image_url": "https://images.pexels.com/photos/8847169/pexels-photo-8847169.jpeg"
+    "image_url": "https://images.pexels.com/photos/16584186/pexels-photo-16584186.jpeg"
   }
 ]

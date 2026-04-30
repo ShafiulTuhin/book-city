@@ -6,24 +6,46 @@ import { useState } from "react";
 import LogoImg from "@/assets/logo.png";
 import NavLink from "./NavLink";
 import avatar from "@/assets/user.png";
-// import { authClient } from "@/lib/auth-client";
+import { authClient } from "@/lib/auth-client";
 import { Button } from "@heroui/react";
 import { FaGoogle } from "react-icons/fa";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
-  //   const { data, isPending } = authClient.useSession();
+  const { data, isPending } = authClient.useSession();
 
-  //   const user = data?.user;
-  //   console.log(isPending);
+  const user = data?.user;
+  console.log(isPending);
 
   const [isOpen, setIsOpen] = useState(false);
   const border = "border-1 border-gray-400 py-2 rounded-lg";
 
-  //   const handleGoogleLogin = async () => {
-  //     await authClient.signIn.social({
-  //       provider: "google",
-  //     });
-  //   };
+  const router = useRouter();
+  const handleLogout = async () => {
+    try {
+      await authClient.signOut({
+        fetchOptions: {
+          onSuccess: () => {
+            router.push("/"); // redirect to login page
+            toast.success("Logged out successfully", {
+              position: "top-center",
+              autoClose: 5000,
+            });
+          },
+        },
+      });
+    } catch (error) {
+      toast.error("Logout failed");
+      console.log(error);
+    }
+  };
+
+  const handleGoogleLogin = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+    });
+  };
 
   return (
     <div className="border-b">
@@ -47,7 +69,7 @@ const Navbar = () => {
         </ul>
 
         {/* Desktop Right */}
-        {/* {isPending ? (
+        {isPending ? (
           <span className="flex justify-center items-center">Loading...</span>
         ) : user ? (
           <div className="hidden md:flex items-center gap-4">
@@ -58,32 +80,29 @@ const Navbar = () => {
             <Image src={user?.image} alt={user?.name} width={40} height={40} />
 
             <button
-              onClick={async () => {
-                (await authClient.signOut(),
-                  toast.success("Logged out successfully"));
-              }}
-              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg cursor-pointer px-4 py-2"
+              onClick={handleLogout}
+              className="bg-[#f59e0b] text-[#081f30] font-bold rounded-lg cursor-pointer px-4 py-2"
             >
               Logout
             </button>
           </div>
-        ) : ( */}
-        <div className="hidden md:flex items-center gap-4">
-          <Image src={avatar} alt="User" width={40} height={40} />
-          <Link href="/login">
-            <button className="bg-[#f59e0b] text-[#081f30] font-bold rounded-lg cursor-pointer px-4 py-2">
-              Login
-            </button>
-          </Link>
+        ) : (
+          <div className="hidden md:flex items-center gap-4">
+            <Image src={avatar} alt="User" width={40} height={40} />
+            <Link href="/login">
+              <button className="bg-[#f59e0b] text-[#081f30] font-bold rounded-lg cursor-pointer px-4 py-2">
+                Login
+              </button>
+            </Link>
 
-          <Button
-            // onClick={handleGoogleLogin}
-            className="bg-[#f59e0b] text-[#081f30] font-bold rounded-lg"
-          >
-            <FaGoogle alt="Signin with Google" />
-          </Button>
-        </div>
-        {/* )} */}
+            <Button
+              onClick={handleGoogleLogin}
+              className="bg-[#f59e0b] text-[#081f30] font-bold rounded-lg py-2"
+            >
+              <FaGoogle alt="Signin with Google" />
+            </Button>
+          </div>
+        )}
 
         {/* Mobile Menu Button */}
         <button
@@ -115,51 +134,40 @@ const Navbar = () => {
         </ul>
 
         <div className="">
-          {/* {isPending ? (
+          {isPending ? (
             <span className="flex justify-center items-center">Loading...</span>
           ) : user ? (
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-3">
-                <Image
-                  src={user?.image}
-                  alt={user?.name}
-                  width={40}
-                  height={40}
-                  className="rounded-full"
-                />
-                <div>
+                <div className="md:text-start text-center">
                   <p className="text-green-600 font-semibold">Welcome!</p>
                   <p className="font-bold">{user?.name}</p>
                 </div>
               </div>
 
               <button
-                onClick={async () => {
-                  (await authClient.signOut(),
-                    toast.success("Logged out successfully"));
-                }}
-                className="btn bg-gradient-to-r from-purple-500 to-pink-500 py-2 text-white rounded-lg w-full"
+                onClick={handleLogout}
+                className="btn bg-[#f59e0b] text-[#081f30] font-bold cursor-pointer py-2  rounded-lg w-full"
               >
                 Logout
               </button>
             </div>
-          ) : ( */}
-          <div className="flex flex-col gap-3">
-            <Image src={avatar} alt="User" width={40} height={40} />
-            <Link href="/login">
-              <button className="btn bg-[#f59e0b] py-2  text-[#081f30] rounded-lg w-full font-bold">
-                Login
-              </button>
-            </Link>
-            <Button
-              // onClick={handleGoogleLogin}
-              className="flex gap-2 bg-[#f59e0b] py-2 w-full  text-[#081f30] font-bold rounded-lg"
-            >
-              <FaGoogle />
-              Login with google
-            </Button>
-          </div>
-          {/* )} */}
+          ) : (
+            <div className="flex flex-col gap-3">
+              <Link href="/login">
+                <button className="btn bg-[#f59e0b] text-[#081f30] py-2  cursor-pointer rounded-lg w-full font-bold">
+                  Login
+                </button>
+              </Link>
+              <Button
+                onClick={handleGoogleLogin}
+                className="flex gap-2 bg-[#f59e0b] py-2 w-full  text-[#081f30] font-bold rounded-lg"
+              >
+                <FaGoogle />
+                Login with google
+              </Button>
+            </div>
+          )}
         </div>
       </div>
     </div>

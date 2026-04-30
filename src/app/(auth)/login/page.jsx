@@ -1,7 +1,16 @@
-import React from "react";
+import Login from "@/components/login/Login";
+
+export const metadata = {
+  title: "Book-City | Login",
+  description: "Be the part of our awesome collections",
+};
 
 const LoginPage = () => {
-  return <div>Login Page</div>;
+  return (
+    <div>
+      <Login />
+    </div>
+  );
 };
 
 export default LoginPage;
