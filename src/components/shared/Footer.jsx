@@ -1,14 +1,19 @@
 "use client";
 
-// import { Divider } from "@heroui/react";
 import Link from "next/link";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 
 export default function Footer() {
   return (
     <footer className="bg-[#081f30] text-[#f59e0b] mt-10">
       <div className="max-w-7xl mx-auto px-4 py-10">
         {/* Top Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-b  pb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 border-b pb-6">
           {/* Brand */}
           <div>
             <h2 className="text-2xl font-bold">Book-City</h2>
@@ -45,22 +50,61 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Social Media */}
           <div>
-            <h3 className="text-lg font-semibold mb-3">Contact</h3>
-            <p className="text-sm">Email: support@bookcity.com</p>
-            <p className="text-sm">Phone: +880 1XXX-XXXXXX</p>
-            <p className="text-sm">Location: Chattogram, Bangladesh</p>
+            <h3 className="text-lg font-semibold mb-3">Follow Us</h3>
+            <div className="flex gap-4">
+              <a
+                href="#"
+                className="p-3 bg-white text-[#081f30] rounded-full hover:scale-110 transition"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                href="#"
+                className="p-3 bg-white text-[#081f30] rounded-full hover:scale-110 transition"
+              >
+                <FaTwitter />
+              </a>
+              <a
+                href="#"
+                className="p-3 bg-white text-[#081f30] rounded-full hover:scale-110 transition"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="#"
+                className="p-3 bg-white text-[#081f30] rounded-full hover:scale-110 transition"
+              >
+                <FaLinkedinIn />
+              </a>
+            </div>
+          </div>
+
+          {/* Contact Us */}
+          <div>
+            <h3 className="text-lg font-semibold mb-3">Contact Us</h3>
+
+            <div className="flex flex-col gap-3">
+              <input
+                type="email"
+                placeholder="Your email"
+                className="px-3 py-2 rounded-lg text-black outline-none"
+              />
+              <button className="bg-[#f59e0b] text-[#081f30] font-semibold py-2 rounded-lg hover:opacity-90">
+                Send
+              </button>
+            </div>
+
+            <div className="mt-4 text-sm text-[#f59e0b]/80">
+              <p>📞 +880 1XXX-XXXXXX</p>
+              <p>📍 Chattogram, Bangladesh</p>
+            </div>
           </div>
         </div>
 
-        {/* Divider */}
-        {/* <div className="my-6">
-          <Divider className="bg-[#f59e0b]/30" />
-        </div> */}
-
         {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row items-center justify-between text-sm gap-2 mt-10">
+        <div className="flex flex-col md:flex-row items-center justify-between text-sm gap-2 mt-6">
           <p>© {new Date().getFullYear()} Book-City. All rights reserved.</p>
           <p>Built with Next.js + Hero UI</p>
         </div>

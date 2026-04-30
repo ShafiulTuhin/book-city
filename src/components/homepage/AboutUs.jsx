@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { Button, Card } from "@heroui/react";
+import Link from "next/link";
 
 const AboutUs = () => {
   return (
-    <div className="container mx-auto py-15">
+    <div className="container mx-auto">
       <h2 className="text-center lg:text-5xl text-3xl text-[#081f30] font-bold">
         About Us
       </h2>
@@ -33,11 +34,11 @@ const AboutUs = () => {
               strong community of learners and readers.
             </p>
 
-            <div className="mt-6">
-              <Button className="bg-[#081f30] text-white hover:bg-pink-600 transition">
+            <Link href={"/all-books"} className="mt-6">
+              <Button className="bg-[#081f30] text-white hover:bg-[#f59e0b] transition mt-5">
                 Explore Books
               </Button>
-            </div>
+            </Link>
           </div>
 
           {/* RIGHT SIDE */}

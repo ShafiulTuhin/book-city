@@ -1,9 +1,10 @@
+import SearchBooks from "@/components/search/SearchBooks";
 import BookCard from "@/components/shared/BookCard";
 import { getBooks, getCategories } from "@/lib/data";
 import Link from "next/link";
 
 export const metadata = {
-  title: "PixGen | All-Books",
+  title: "Book-City | All-Books",
   description: "",
 };
 
@@ -32,7 +33,7 @@ const AllBooksPage = async ({ searchParams }) => {
             <div className="space-y-2">
               <Link href="/all-books">
                 <button
-                  className={`w-full text-left px-4 py-2 rounded-lg ${
+                  className={`w-full cursor-pointer text-left px-4 py-2 rounded-lg ${
                     !category
                       ? "bg-[#081f30] text-white"
                       : "bg-gray-100 hover:bg-[#081f30] hover:text-white"
@@ -47,8 +48,7 @@ const AllBooksPage = async ({ searchParams }) => {
                   href={`/all-books?category=${cat.name.toLowerCase()}`}
                   key={cat.id}
                 >
-                  {" "}
-                  <button className="w-full text-left px-4 py-2 mt-3 rounded-lg bg-gray-100 hover:bg-[#081f30] hover:text-white transition">
+                  <button className="w-full text-left px-4 py-2 mt-3 rounded-lg bg-gray-100 hover:bg-[#081f30] hover:text-white transition cursor-pointer">
                     {cat.name}
                   </button>
                 </Link>
@@ -66,16 +66,7 @@ const AllBooksPage = async ({ searchParams }) => {
             </h2>
 
             {/* Search */}
-            <div className="flex w-full md:w-auto gap-2">
-              <input
-                type="text"
-                placeholder="Search books..."
-                className="px-4 py-2 border rounded-lg w-full md:w-72 focus:outline-none focus:ring-2 focus:ring-[#081f30]"
-              />
-              <button className="px-5 py-2 bg-[#081f30] text-white rounded-lg hover:opacity-90">
-                Search
-              </button>
-            </div>
+            <SearchBooks />
           </div>
 
           {/* Books Grid */}

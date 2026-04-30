@@ -29,9 +29,9 @@ const Navbar = () => {
     <div className="border-b">
       <div className="flex justify-between items-center  px-4 ">
         {/* Logo */}
-        <div className="text-xl font-bold">
+        <Link href={"/"}>
           <Image src={LogoImg} alt="Logo" width={80} height={80} />
-        </div>
+        </Link>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-6 items-center font-bold text-[#797979]">
