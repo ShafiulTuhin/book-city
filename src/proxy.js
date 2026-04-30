@@ -9,12 +9,10 @@ export async function proxy(request) {
   });
 
   const user = session?.user;
-  console.log(user);
 
   if (user) {
     return NextResponse.next();
   }
-
   return NextResponse.redirect(new URL("/login", request.url));
 }
 

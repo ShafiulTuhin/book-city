@@ -39,8 +39,6 @@ const Register = () => {
       toast.success("Signup successful");
       router.push("/login");
     }
-
-    console.log(res, error);
   };
 
   return (

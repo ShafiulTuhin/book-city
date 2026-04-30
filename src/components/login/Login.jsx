@@ -112,7 +112,7 @@ const Login = () => {
             </span>
           </button>
           <p className="mt-3 text-[#081f30]">
-            Do not have an account ?
+            Don't have an account ?
             <span
               onClick={() => router.push("/register")}
               className="text-[#f59e0b] cursor-pointer underline font-bold"

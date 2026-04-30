@@ -14,7 +14,6 @@ const Navbar = () => {
   const { data, isPending } = authClient.useSession();
 
   const user = data?.user;
-  console.log(isPending);
 
   const [isOpen, setIsOpen] = useState(false);
   const border = "border-1 border-gray-400 rounded-lg";
@@ -35,14 +34,12 @@ const Navbar = () => {
       });
     } catch (error) {
       toast.error("Logout failed");
-      console.log(error);
     }
   };
 
   return (
     <div className="border-b">
       <div className="flex justify-between items-center  px-4 ">
-        {/* Logo */}
         <Link href={"/"}>
           <Image src={LogoImg} alt="Logo" width={80} height={80} />
         </Link>
@@ -60,7 +57,6 @@ const Navbar = () => {
           </li>
         </ul>
 
-        {/* Desktop Right */}
         {isPending ? (
           <span className="flex justify-center items-center">Loading...</span>
         ) : user ? (
@@ -94,9 +90,9 @@ const Navbar = () => {
               <Image
                 src="https://www.svgrepo.com/show/475656/google-color.svg"
                 alt="Google"
-                // className="w-5 h-5"
                 width={20}
                 height={20}
+                title="Login with google"
               />
             </button>
           </div>

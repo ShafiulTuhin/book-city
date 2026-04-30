@@ -27,7 +27,6 @@ const UpdateUser = () => {
     });
 
     if (error) {
-      console.log(error);
       return;
     }
 

@@ -4,8 +4,6 @@ import BookCard from "../shared/BookCard";
 
 const Featured = async () => {
   const books = await getBooks();
-  console.log(books);
-
   return (
     <div className="container mx-auto py-15">
       <h2 className="text-center lg:text-5xl text-3xl text-[#081f30] font-bold">
