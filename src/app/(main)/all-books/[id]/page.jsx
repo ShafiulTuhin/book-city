@@ -2,26 +2,29 @@ import { getBooks } from "@/lib/data";
 import Image from "next/image";
 import { Button, Card, Badge } from "@heroui/react";
 
+export const generateMetadata = async ({ params }) => {
+  const { id } = await params;
+  const books = await getBooks();
+
+  const book = books.find((book) => book.id == id);
+
+  return {
+    title: ` Book-City | ${book.title}`,
+    description: book.details,
+  };
+};
+
 const BookDetailSPage = async ({ params }) => {
   const { id } = await params;
   const books = await getBooks();
 
   const book = books.find((book) => book.id == id);
-  console.log(book);
 
   return (
     <div className="min-h-screen bg-white px-4 py-10 flex items-center justify-center">
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* IMAGE SECTION */}
         <Card className="overflow-hidden rounded-2xl shadow-lg">
-          {/* <Image
-            src={book.image_url.trim()}
-            alt={book.title}
-            width={800}
-            height={600}
-            className="w-full h-[350px] md:h-full object-cover rounded-lg"
-            priority
-          /> */}
           <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px]">
             <Image
               src={book.image_url.trim()}

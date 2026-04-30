@@ -18,7 +18,7 @@ const Navbar = () => {
   console.log(isPending);
 
   const [isOpen, setIsOpen] = useState(false);
-  const border = "border-1 border-gray-400 py-2 rounded-lg";
+  const border = "border-1 border-gray-400 rounded-lg";
 
   const router = useRouter();
   const handleLogout = async () => {
@@ -120,10 +120,9 @@ const Navbar = () => {
       >
         <ul className="flex flex-col gap-3 font-bold text-[#797979] bg-white shadow-lg p-4 rounded-lg">
           <li className={`${border}`}>
-            <NavLink href="/" className="block w-full">
-              Home
-            </NavLink>
+            <NavLink href="/">Home</NavLink>
           </li>
+
           <li className={`${border}`}>
             <NavLink href="/all-books">All Books</NavLink>
           </li>
